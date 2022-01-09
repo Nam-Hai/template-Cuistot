@@ -1,0 +1,72 @@
+
+.wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 8rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        margin-top: auto;
+        background-color: var(--secondary);
+        font-family: var(--font-secondary);
+        .nav-mobile {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+            grid-gap: 3rem;
+
+            a {
+                span {
+                    font-size: 3rem;
+                }
+            }
+        }
+        .reservation {
+            margin: 3rem;
+            background: black;
+            color: white;
+            display: flex;
+            border: 2px solid black;
+            padding: .5rem 3rem;
+            .reservation-text {
+                position: relative;
+                left: 0;
+                transition: left 400ms;
+            }
+            .img-wrapper {
+                position: relative;
+                width: 0;
+                opacity: 0;
+                margin-right: -1rem;
+                margin-left: 1rem;
+                transition: 400ms;
+                img {
+                    height: 1rem;
+                }
+            }
+            transition: 400ms;
+            &:hover {
+                .reservation-text {
+                    left: -1rem;
+                }
+                background-color: white;
+                color: black;
+                border: 2px solid black;
+                .img-wrapper {
+                    margin-left: 0rem;
+                    margin-right: 0rem;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+
+}

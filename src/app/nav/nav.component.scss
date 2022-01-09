@@ -1,0 +1,177 @@
+.nav-container {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-text);
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .home {
+        font-size: 2rem;
+    }
+    .nav-items {
+        font-family: var(--font-secondary);
+        display: flex;
+        flex-direction: row;
+        grid-gap: 2rem;
+        align-items: center;
+
+        .line-wrapper {
+            position: absolute;
+            svg {
+                path {
+                    transition: stroke-dashoffset 200ms;
+                }
+            }
+        }
+        .line-wrapper#line-menu {
+            position: absolute;
+            svg {
+                height: 2rem;
+                margin-top: -.5rem;
+                margin-left: -.6rem;
+                path {
+                    stroke-dasharray: 600;
+                    stroke-dashoffset: 600;
+                    
+                }
+            }
+        }
+
+        .line-wrapper#line-histoire {
+            position: absolute;
+            svg {
+                height: 5.5rem;
+                margin-top: -2.6rem;
+                margin-left: -.7rem;
+                path {
+                    transition: stroke-dashoffset 250ms;
+                    stroke-dasharray: 700;
+                    stroke-dashoffset: 700;
+                    
+                }
+            }
+        }
+
+        .line-wrapper#line-galerie {
+            svg {
+                height: 4rem;
+                margin-top: -2.6rem;
+                margin-left: -1.5rem;
+                path {
+                    transition: stroke-dashoffset 400ms;
+                    stroke-dasharray: 1780;
+                    stroke-dashoffset: 1780;
+                }
+            }
+        }
+        .line-wrapper#line-contact {
+            svg {
+                height: 3rem;
+                margin-top: -1.4rem;
+                margin-left: -.5rem;
+                path {
+                    transition: stroke-dashoffset 300ms;
+                    stroke-dasharray: 800;
+                    stroke-dashoffset: 800;
+                }
+            }
+        }
+
+        .nav-item:hover {
+            .line-wrapper svg path {
+                stroke-dashoffset: 0!important;
+            }
+        }
+    }
+
+    .reservation {
+        background: black;
+        color: white;
+        height: 100%;
+        display: flex;
+        border: 2px solid black;
+        padding: .5rem 3rem;
+        .reservation-text {
+            position: relative;
+            left: 0;
+            transition: left 400ms;
+        }
+        .img-wrapper {
+            position: relative;
+            width: 0;
+            opacity: 0;
+            margin-right: -1rem;
+            margin-left: 1rem;
+            transition: 400ms;
+            img {
+                height: 1rem;
+            }
+        }
+        transition: 400ms;
+        &:hover {
+            .reservation-text {
+                left: -1rem;
+            }
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+            .img-wrapper {
+                margin-left: 0rem;
+                margin-right: 0rem;
+                opacity: 1;
+            }
+        }
+    }
+}
+.hamburger {
+    display: none;
+}
+
+.btn {
+    font-family: var(--font-text);
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: none;
+    padding: .5rem 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .nav-container .nav-items, .nav-container .reservation {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        height: 2rem;
+        width: 2rem;
+        background: none;
+        border: none;
+        transform: rotate(180deg);
+        cursor: pointer;
+        > div {
+            display: block;
+            position: absolute;
+            background: black;
+            height: 2px;
+            width: inherit;
+            transition: width 250ms;
+            &:first-child {
+                transform: translateY(-.5rem);
+                width: 1.5rem;
+            }
+            &:nth-child(2) {
+                width: 1rem;
+            }
+            &:nth-child(3) {
+                transform: translateY(.5rem);
+                width: 2rem;
+            }
+        }
+        &:hover {
+            > div {
+                width: 2rem!important;
+            }
+        }
+    }
+}

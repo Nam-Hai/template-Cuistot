@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    
+}
+
+:root{
+    --font-text: "Lambda";
+    --font-secondary: "Consulate";
+    --primary: black;
+    --secondary: #FFF;
+}
+
+a {
+    text-decoration: unset;
+    color: unset;
+    cursor: pointer;
+    font-family: unset;
+}
