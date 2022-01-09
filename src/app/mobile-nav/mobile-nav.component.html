@@ -2,13 +2,13 @@
     <div class="container" @mobileMenuToggle>
         <div class="nav-mobile">
             <a href="#">
-                <span [@typeMachineAnimation]="{value:'', params: {lenght: (vitesseEcriture/4)* indexOfelement}}" *ngFor="let el of 'Menu' | splitString; let indexOfelement = index">{{el}}</span>
+                <span [@typeMachineAnimation]="{value:'', params: {lenght: vitesseEcriture* indexOfelement}}" *ngFor="let el of 'Menu' | splitString; let indexOfelement = index">{{el}}</span>
             </a>
-            <a href="#" ><span [@typeMachineAnimation]="{value:'', params: {lenght: (vitesseEcriture/14)* indexOfelement + vitesseEcriture}}" *ngFor="let el of 'Notre Histoire' | splitString; let indexOfelement = index">{{el}}</span></a>
+            <a href="#" ><span [@typeMachineAnimation]="{value:'', params: {lenght: vitesseEcriture* indexOfelement + vitesseEcriture*10}}" *ngFor="let el of 'Notre Histoire' | splitString; let indexOfelement = index">{{el}}</span></a>
             <a href="#" >
-                <span [@typeMachineAnimation]="{value:'', params: {lenght: (vitesseEcriture/7)* indexOfelement + 2*vitesseEcriture}}" *ngFor="let el of 'Galerie' | splitString; let indexOfelement = index">{{el}}</span>
+                <span [@typeMachineAnimation]="{value:'', params: {lenght: vitesseEcriture* indexOfelement +27*vitesseEcriture}}" *ngFor="let el of 'Galerie' | splitString; let indexOfelement = index">{{el}}</span>
             </a>
-            <a href="#" ><span [@typeMachineAnimation]="{value:'', params: {lenght: (vitesseEcriture/5)* indexOfelement + vitesseEcriture*3}}" *ngFor="let el of 'Contact' | splitString; let indexOfelement = index">{{el}}</span></a>
+            <a href="#" ><span [@typeMachineAnimation]="{value:'', params: {lenght: vitesseEcriture* indexOfelement + vitesseEcriture*36}}" *ngFor="let el of 'Contact' | splitString; let indexOfelement = index">{{el}}</span></a>
         </div>
         <a class="reservation btn">
             <div class="reservation-text">Réservation</div>

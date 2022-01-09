@@ -32,7 +32,7 @@ import { Container } from '../animation/animation';
 })
 export class MobileNavComponent implements OnInit {
 
-  vitesseEcriture = 500;
+  vitesseEcriture = 50;
 
   constructor() { }
 
