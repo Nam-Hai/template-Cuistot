@@ -32,11 +32,13 @@ import { Container } from '../animation/animation';
 })
 export class MobileNavComponent implements OnInit {
 
-  vitesseEcriture = 50;
+  vitesseEcriture = 40;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
+  
 }

@@ -6,8 +6,16 @@
     
 }
 
-:root{
-    --font-text: "Lambda";
+@font-face {
+    font-family: 'Panamera';
+    font-weight: 500;
+    src: url('../src/font/Panamera-Regular.woff2') format('woff2');
+}
+
+:root{  
+    
+    //--font-text: "Lambda";
+    --font-text: "Panamera";
     --font-secondary: "Consulate";
     --primary: black;
     --secondary: #FFF;
@@ -19,3 +27,4 @@ a {
     cursor: pointer;
     font-family: unset;
 }
+

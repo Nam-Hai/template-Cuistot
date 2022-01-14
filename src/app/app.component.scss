@@ -2,3 +2,46 @@ nav {
     width: 100vw;
 }
 
+@font-face {
+    font-family: "Isenheim";
+    src: url('../font/Isenheim_Regulier.otf');
+}
+
+.container {
+    margin: 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        text-align: center;
+        margin: 0 auto;
+        font-size: 5rem;
+        font-family: var(--font-text);
+        width: 50rem;
+        min-width: 70%;
+        position: relative;
+        z-index: 1;
+    }
+
+    img {
+        width: 100%;
+        margin: 2rem 0 0;
+    }
+}
+
+.container-plat {
+    margin: 4rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    > div {
+        width: 50%;
+    }
+
+    .right {
+        img {
+            width: 100%;
+        }
+    }
+}

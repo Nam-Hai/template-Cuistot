@@ -4,7 +4,8 @@
             <a href="#">
                 <span [@typeMachineAnimation]="{value:'', params: {lenght: vitesseEcriture* indexOfelement}}" *ngFor="let el of 'Menu' | splitString; let indexOfelement = index">{{el}}</span>
             </a>
-            <a href="#" ><span [@typeMachineAnimation]="{value:'', params: {lenght: vitesseEcriture* indexOfelement + vitesseEcriture*10}}" *ngFor="let el of 'Notre Histoire' | splitString; let indexOfelement = index">{{el}}</span></a>
+            <a href="#" ><span [@typeMachineAnimation]="{value:'', params: {lenght: vitesseEcriture* indexOfelement + vitesseEcriture*10}}" *ngFor="let el of 'Notre Histoire' | splitString; let indexOfelement = index">{{el}}</span>
+            </a>
             <a href="#" >
                 <span [@typeMachineAnimation]="{value:'', params: {lenght: vitesseEcriture* indexOfelement +27*vitesseEcriture}}" *ngFor="let el of 'Galerie' | splitString; let indexOfelement = index">{{el}}</span>
             </a>
