@@ -1,5 +1,5 @@
 nav {
-    width: 100vw;
+    width: 100%;
 }
 
 @font-face {
@@ -36,7 +36,16 @@ nav {
     justify-content: space-between;
 
     > div {
-        width: 50%;
+        width: 45%;
+        font-family: var(--font-text);
+        h3 {
+            font-size: 2rem;
+            text-align: center;
+        }
+        p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
     }
 
     .right {
@@ -44,4 +53,16 @@ nav {
             width: 100%;
         }
     }
+}
+
+.margin {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+app-carte {
+    display: block;
+    margin-bottom: 15rem;
+    width: 100%;
+    
 }
