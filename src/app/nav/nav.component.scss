@@ -138,7 +138,14 @@
     padding: .5rem 2rem;
 }
 
-@media screen and (max-width: 1000px) {
+app-mobile-nav {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    app-mobile-nav {
+        display: block;
+    }
     .nav-container {
         padding: 2rem 2rem;
         .nav-items, .reservation {
