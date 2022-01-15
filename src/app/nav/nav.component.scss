@@ -1,7 +1,7 @@
 .nav-container {
     position: relative;
     z-index: 2;
-    font-family: var(--font-text);
+    font-family: var(--font-title);
     padding: 3rem 4rem;
     display: flex;
     flex-direction: row;
@@ -131,7 +131,7 @@
 }
 
 .btn {
-    font-family: var(--font-text);
+    font-family: var(--font-title);
     background-color: var(--primary);
     color: var(--secondary);
     border: none;
