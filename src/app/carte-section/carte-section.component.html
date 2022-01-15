@@ -1,10 +1,5 @@
 <h3>{{carteSection}}</h3>
 
 <div class="container">
-    <app-carte-item></app-carte-item>
-    <app-carte-item></app-carte-item>
-    <app-carte-item></app-carte-item>
-    <app-carte-item></app-carte-item>
-    <app-carte-item></app-carte-item>
-    <app-carte-item></app-carte-item>
+    <app-carte-item *ngFor="let item of sectionJSON" [carteItemName]="item.name" [carteItemNote]="item.note" [price]="item.price"></app-carte-item>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-carte-section',
@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carte-section.component.scss']
 })
 export class CarteSectionComponent implements OnInit {
+  @Input() carteSection !: string;
+  @Input() sectionJSON !: any;
 
-  carteSection = 'Ramen'
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }

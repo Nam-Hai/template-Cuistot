@@ -16,8 +16,9 @@ nav {
         text-align: center;
         margin: 0 auto;
         font-size: 5rem;
-        font-family: var(--font-text);
+        font-family: var(--font-title);
         width: 50rem;
+        max-width: 100%;
         min-width: 70%;
         position: relative;
         z-index: 1;
@@ -37,7 +38,7 @@ nav {
 
     > div {
         width: 45%;
-        font-family: var(--font-text);
+        font-family: var(--font-title);
         h3 {
             font-size: 2rem;
             text-align: center;
@@ -45,6 +46,8 @@ nav {
         p {
             font-size: 1.5rem;
             margin-top: 1rem;
+            font-family: var(--font-secondary);
+            font-weight: 400;
         }
     }
 
@@ -63,4 +66,35 @@ nav {
 app-carte {
     display: block;
     margin-bottom: 15rem;    
+}
+
+@media screen and (max-width: 1250px) {
+
+    .container h1 {
+        font-size: 4rem;
+    }
+    .right {
+        display: none;
+    }
+
+    .container-plat > div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container h1 {
+        font-size: 3rem;
+    }
+
+    .container-plat {
+        > div p {
+            font-size: 1rem;
+        }
+    }
+
+    .margin {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-carte-item',
@@ -6,11 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carte-item.component.scss']
 })
 export class CarteItemComponent implements OnInit {
+  @Input() carteItemName !: string;
+  @Input() price !: string;
+  @Input() carteItemNote !: string;
 
-
-  carteItemName = 'Ramen au porc';
-  price = '15$';
-  carteItemNote = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
   constructor() { }
 
   ngOnInit(): void {
