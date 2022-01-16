@@ -11,7 +11,20 @@ import { CarteSectionComponent } from './carte-section/carte-section.component';
 import { CarteItemComponent } from './carte-item/carte-item.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { ViewComponent } from './view/view.component';
+import { ExtraOptions, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
+const appRoutes: Routes = [
+  { path: '', component: ViewComponent },
+  { path: 'Menu', component: CarteComponent },
+];
+
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 1],
+};
 
 
 @NgModule({
@@ -24,12 +37,15 @@ import { MainContentComponent } from './main-content/main-content.component';
     CarteSectionComponent,
     CarteItemComponent,
     FooterComponent,
-    MainContentComponent
+    MainContentComponent,
+    ViewComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes, routerOptions),
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
