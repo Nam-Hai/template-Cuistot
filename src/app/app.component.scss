@@ -1,100 +1,29 @@
 nav {
     width: 100%;
-}
-
-@font-face {
-    font-family: "Isenheim";
-    src: url('../font/Isenheim_Regulier.otf');
-}
-
-.container {
-    margin: 4rem 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h1 {
-        text-align: center;
-        margin: 0 auto;
-        font-size: 5rem;
-        font-family: var(--font-title);
-        width: 50rem;
-        max-width: 100%;
-        min-width: 70%;
-        position: relative;
-        z-index: 1;
-    }
-
-    img {
+    height: 8rem;
+    background: white;
+    
+    app-nav {
+        z-index: 10;
+        background: rgba(255, 255, 255, 0.596);
+        position: fixed;
+        display: block;
         width: 100%;
-        margin: 2rem 0 0;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    nav {
+        height: 6rem;
     }
 }
 
-.container-plat {
-    margin: 4rem 4rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    > div {
-        width: 45%;
-        font-family: var(--font-title);
-        h3 {
-            font-size: 2rem;
-            text-align: center;
-        }
-        p {
-            font-size: 1.5rem;
-            margin-top: 1rem;
-            font-family: var(--font-secondary);
-            font-weight: 400;
-        }
-    }
-
-    .right {
-        img {
-            width: 100%;
-        }
-    }
-}
-
-.margin {
-    margin-left: 4rem;
-    margin-right: 4rem;
-}
 
 app-carte {
     display: block;
-    margin-bottom: 15rem;    
+    margin-bottom: 8rem;    
 }
 
-@media screen and (max-width: 1250px) {
-
-    .container h1 {
-        font-size: 4rem;
-    }
-    .right {
-        display: none;
-    }
-
-    .container-plat > div {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .container h1 {
-        font-size: 3rem;
-    }
-
-    .container-plat {
-        > div p {
-            font-size: 1rem;
-        }
-    }
-
-    .margin {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-}
