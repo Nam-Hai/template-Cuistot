@@ -2,10 +2,11 @@
 .wrapper {
     position: absolute;
     z-index: 5;
-    top: 6rem;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 6rem;
+    // background-color: var(--secondary);
+
     .container {
         display: flex;
         flex-direction: column;
@@ -13,7 +14,6 @@
         text-align: center;
         height: 100%;
         margin-top: auto;
-        background-color: var(--secondary);
         font-family: var(--font-secondary);
         .nav-mobile {
             display: flex;
