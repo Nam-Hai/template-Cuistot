@@ -9,6 +9,8 @@ import { SplitStringPipe } from './split-string.pipe';
 import { CarteComponent } from './carte/carte.component';
 import { CarteSectionComponent } from './carte-section/carte-section.component';
 import { CarteItemComponent } from './carte-item/carte-item.component';
+import { FooterComponent } from './footer/footer.component';
+import { MainContentComponent } from './main-content/main-content.component';
 
 
 
@@ -20,7 +22,9 @@ import { CarteItemComponent } from './carte-item/carte-item.component';
     SplitStringPipe,
     CarteComponent,
     CarteSectionComponent,
-    CarteItemComponent
+    CarteItemComponent,
+    FooterComponent,
+    MainContentComponent
   ],
   imports: [
     BrowserModule,
