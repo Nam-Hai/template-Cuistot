@@ -1,7 +1,7 @@
 <div class="nav-container">
-    <a class="home" href="#">Cuistot</a>
+    <a class="home" routerLink="" (click)="scrollTop()">Cuistot</a>
     <div class="nav-items">
-        <a class="nav-item" href="#">
+        <a class="nav-item" routerLink="Menu" (click)="scrollMenu()">
             Menu
             <div class="line-wrapper" id="line-menu">
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 400"><path d="M126.00897216796875,250.22421264648438C190.52316731770833,240.54708506266277,199.1479654947917,212.76533111572266,359.19281005859375,215.24664306640625C519.2376546223958,217.72795501708984,608.9536645507812,247.03437052408853,704.4843139648438,259.19281005859375" fill="none" stroke-width="23" stroke="black" stroke-linecap="round" stroke-dasharray="0 0" transform="matrix(1.0473750000000002,5.551115123125783e-17,-5.551115123125783e-17,1.0473750000000002,-34.918952781677376,-48.376256854057374)"></path><defs><linearGradient id="SvgjsLinearGradient1001" gradientTransform="rotate(196, 0.5, 0.5)"><stop stop-color="hsl(50, 98%, 60%)" offset="0"></stop><stop stop-color="hsl(50, 98%, 80%)" offset="1"></stop></linearGradient></defs></svg>
@@ -19,12 +19,12 @@
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 400"><path d="M469.5067138671875,45.73991012573242C445.8893788655599,46.03886413574219,376.2331949869792,43.79671287536621,327.8027038574219,47.533634185791016C279.37221272786456,51.27055549621582,219.88042068481445,53.21375592549642,178.92376708984375,68.16143798828125C137.96711349487305,83.10912005106609,98.65471013387044,104.93272908528647,82.06278228759766,137.2197265625C65.47085444132487,169.50672403971353,56.80119959513347,227.0553181966146,79.37220001220703,261.8834228515625C101.9432004292806,296.71152750651044,158.59491602579752,328.69956970214844,217.48878479003906,346.1883544921875C276.3826535542806,363.67713928222656,363.37816619873047,368.9088083902995,432.73541259765625,366.8161315917969C502.09265899658203,364.72345479329425,585.2017720540365,350.9716033935547,633.6322631835938,333.6322937011719C682.062754313151,316.29298400878906,717.6382344563802,298.6547139485677,723.318359375,262.7802734375C728.9984842936198,226.90583292643228,709.267567952474,161.58445556958517,667.7130126953125,118.38565063476562C626.158457438151,75.18684569994608,506.2780253092448,22.720478296279907,473.99102783203125,3.5874438285827637" fill="none" stroke-width="13" stroke="black" stroke-linecap="round"></path><defs><linearGradient id="SvgjsLinearGradient1014"><stop stop-color="hsl(37, 99%, 67%)" offset="0"></stop><stop stop-color="hsl(316, 73%, 52%)" offset="1"></stop></linearGradient></defs></svg>
             </div>
         </a>
-        <a class="nav-item" href="#">
+        <button class="nav-item" (click)="scrollContact()">
             Contact
             <div class="line-wrapper" id="line-contact">
                 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 400"><path d="M88.34080505371094,315.695068359375C95.96412404378255,299.55156962076825,31.83856964111328,229.29745483398438,134.08071899414062,218.83407592773438C236.32286834716797,208.37069702148438,607.1748708089193,247.23467508951822,701.793701171875,252.914794921875" fill="none" stroke-width="16" stroke="black" stroke-linecap="round"></path><defs><linearGradient id="SvgjsLinearGradient1015"><stop stop-color="hsl(37, 99%, 67%)" offset="0"></stop><stop stop-color="hsl(316, 73%, 52%)" offset="1"></stop></linearGradient></defs></svg>
             </div>
-        </a>
+        </button>
     </div>
     <a class="reservation btn">
         <div class="reservation-text">Réservation</div>

@@ -1,6 +1,9 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition, sequence } from '@angular/animations';
 import { Container } from '../animation/animation';
+
+import { ViewportScroller } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -73,9 +76,9 @@ import { Container } from '../animation/animation';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scroller: ViewportScroller, private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   hamburgerState = false;
@@ -83,6 +86,20 @@ export class NavComponent implements OnInit {
     this.hamburgerState = !this.hamburgerState;
   }
 
+  scrollContact() {
+    this.scroller.scrollToAnchor("contact");
+  }
 
+  scrollMenu() {
+    if (this.router.url == '/Menu') {
+      this.scroller.setOffset([0,200]);
+      this.scroller.scrollToAnchor("Menu");
+
+    }
+  }
+
+  scrollTop() {
+    window.scroll(0,0);
+  }
   
 }

@@ -1,3 +1,12 @@
+button {
+    background: unset;
+    border: unset;
+    font-family: unset;
+    font-weight: unset;
+    font-size: unset;
+    cursor: pointer;
+}
+
 .nav-container {
     position: relative;
     z-index: 7;
@@ -9,6 +18,7 @@
     align-items: center;
     .home {
         font-size: 2rem;
+        font-weight: 600;
     }
     .nav-items {
         font-family: var(--font-secondary);
