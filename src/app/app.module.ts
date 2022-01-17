@@ -14,6 +14,7 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { ViewComponent } from './view/view.component';
 import { ExtraOptions, Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { ModalReservationComponent } from './modal-reservation/modal-reservation.component';
 
 const appRoutes: Routes = [
   { path: '', component: ViewComponent },
@@ -38,7 +39,8 @@ const routerOptions: ExtraOptions = {
     CarteItemComponent,
     FooterComponent,
     MainContentComponent,
-    ViewComponent
+    ViewComponent,
+    ModalReservationComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes, routerOptions),
@@ -47,7 +49,7 @@ const routerOptions: ExtraOptions = {
     BrowserAnimationsModule,
     
   ],
-  providers: [],
+  providers: [MobileNavComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

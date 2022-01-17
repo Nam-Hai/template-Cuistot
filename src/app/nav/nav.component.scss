@@ -9,7 +9,7 @@ button {
 
 .nav-container {
     position: relative;
-    z-index: 7;
+    z-index: 6;
     font-family: var(--font-title);
     padding: 3rem 4rem;
     display: flex;
@@ -105,6 +105,7 @@ button {
         border: 2px solid black;
         padding: .5rem 3rem;
         -webkit-font-smoothing : subpixel-antialiased;
+        z-index: 8;
         .reservation-text {
             position: relative;
             left: 0;
@@ -148,6 +149,11 @@ button {
     padding: .5rem 2rem;
 }
 
+app-modal-reservation {
+    position: absolute;
+    top: 0;
+}
+
 app-mobile-nav {
     display: none;
 }
@@ -156,7 +162,6 @@ app-mobile-nav {
     app-mobile-nav {
         display: block;
         position: absolute;
-        z-index: 5;
         height: 100vh;
         width: 100vw;
         top: 0;

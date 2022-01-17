@@ -1,21 +1,30 @@
 <div class="wrapper">
     <div class="container" @mobileMenuToggle>
         <div class="nav-mobile">
-            <a href="#">
+            <a routerLink="Menu" (click)="scrollMenu()">
+                <!-- Menu -->
                 <span [@typeMachineAnimation]="{value:'', params: {lenght: vitesseEcriture* indexOfelement}}" *ngFor="let el of 'Menu' | splitString; let indexOfelement = index">{{el}}</span>
             </a>
-            <a href="#" ><span [@typeMachineAnimation]="{value:'', params: {lenght: vitesseEcriture* indexOfelement + vitesseEcriture*10}}" *ngFor="let el of 'Notre Histoire' | splitString; let indexOfelement = index">{{el}}</span>
+            <a href="#" (click)="closeMobileNav()">
+                <!-- Notre Histoire -->
+                <span [@typeMachineAnimation]="{value:'', params: {lenght: vitesseEcriture* indexOfelement + vitesseEcriture*10}}" *ngFor="let el of 'Notre Histoire' | splitString; let indexOfelement = index">{{el}}</span>
             </a>
             <a href="#" >
+                <!-- Galerie -->
                 <span [@typeMachineAnimation]="{value:'', params: {lenght: vitesseEcriture* indexOfelement +27*vitesseEcriture}}" *ngFor="let el of 'Galerie' | splitString; let indexOfelement = index">{{el}}</span>
             </a>
-            <a href="#" ><span [@typeMachineAnimation]="{value:'', params: {lenght: vitesseEcriture* indexOfelement + vitesseEcriture*36}}" *ngFor="let el of 'Contact' | splitString; let indexOfelement = index">{{el}}</span></a>
+            <a (click)="scrollContact()">
+                <!-- Contact -->
+                <span [@typeMachineAnimation]="{value:'', params: {lenght: vitesseEcriture* indexOfelement + vitesseEcriture*36}}" *ngFor="let el of 'Contact' | splitString; let indexOfelement = index">{{el}}</span>
+            </a>
         </div>
         <a class="reservation btn">
-            <div class="reservation-text">Réservation</div>
+            <div class="reservation-text" (click)="reservationModalToggle()">Réservation</div>
             <div class="img-wrapper">
                 <img src="../../assets/food-icon-png-18.jpg" alt="food-order">
             </div>
         </a>
     </div>
 </div>
+
+<app-modal-reservation (modalClose)="reservationModalToggle()" *ngIf="modalState"></app-modal-reservation>

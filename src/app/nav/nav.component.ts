@@ -71,7 +71,7 @@ import { Router } from '@angular/router';
         ])
       ])
     ]),
-    Container
+    Container,
   ]
 })
 export class NavComponent implements OnInit {
@@ -84,6 +84,7 @@ export class NavComponent implements OnInit {
   hamburgerState = false;
   toggleHamburgerMenu() {
     this.hamburgerState = !this.hamburgerState;
+    this.overflowBody()
   }
 
   scrollContact() {
@@ -101,5 +102,14 @@ export class NavComponent implements OnInit {
   scrollTop() {
     window.scroll(0,0);
   }
+
+  overflowBody(){
+    document.body.classList.toggle('overflowY');
+  }
   
+
+  modalState = false;
+  reservationModalToggle(){
+    this.modalState = !this.modalState;
+  }
 }

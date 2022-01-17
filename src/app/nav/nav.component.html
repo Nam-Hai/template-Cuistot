@@ -26,7 +26,7 @@
             </div>
         </button>
     </div>
-    <a class="reservation btn">
+    <a class="reservation btn" (click)="reservationModalToggle()">
         <div class="reservation-text">Réservation</div>
         <div class="img-wrapper">
             <img src="../../assets/food-icon-png-18.jpg" alt="food-order">
@@ -39,5 +39,6 @@
 
     </button>
 </div>
+<app-modal-reservation (modalClose)="reservationModalToggle()" *ngIf="modalState"></app-modal-reservation>
 
-<app-mobile-nav *ngIf="hamburgerState" @container></app-mobile-nav>
+<app-mobile-nav *ngIf="hamburgerState" @container (close)="toggleHamburgerMenu()"></app-mobile-nav>
